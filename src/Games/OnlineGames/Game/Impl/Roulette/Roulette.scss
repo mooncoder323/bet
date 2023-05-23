@@ -1,0 +1,371 @@
+.game-roulette {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #111f29;
+  height: 600px;
+  padding-top: 30px;
+  border-radius: 10px;
+  * {
+    color: white;
+  }
+
+  canvas {
+    z-index: 99;
+    margin-left: 10px;
+  }
+
+  .space {
+    div {
+      border: 2px solid #2F4553;
+      border-radius: 5px;
+      padding: 4px 14px;
+      margin: 0 0 2px 2px ;
+      cursor: pointer;
+    }
+  }
+
+  .main {
+    flex: 7 7 0;
+    display: flex;
+
+    .betting_history {
+      height: 310px;
+      overflow: hidden;
+      
+      div {
+        padding: 10px;
+        width: 40px;
+        height: 13%;
+        border-radius: 50%;
+        margin: auto;
+        margin-bottom: 5px;
+      }
+    }
+
+    .display_bet {
+      justify-content: center;
+      div {
+        padding: 10px;
+        width: 45px;
+        height: 12%;
+        border-radius: 10px;
+        margin: auto;
+        margin-top: 50%;
+      }
+    }
+
+    .wheel {
+      width: 300px;
+      position: relative;
+      z-index: 9;
+    }
+
+    div {
+      flex: 1 1 0;
+    }
+
+    .roulette-panel {
+      position: relative;
+      padding: auto;
+    }
+
+  }
+
+  .number {
+    flex: 4 4 0;
+
+    .number-area {
+      height: 100%;
+      max-width: 750px;
+      margin: auto;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+
+      .zero {
+        display: flex;
+        align-items: center;
+        padding: 0px 16px;
+        background-color: #419e3f;
+        height: 58%;
+        border-radius: 5px;
+        margin-right: 2px;
+        cursor: pointer;
+      }
+
+      .tops {
+        flex: 3 3 0;
+        display: flex;
+        flex-direction: column;
+        .number_bottom {
+          display: flex;
+          flex: 2 2 0;
+          .main {
+            display: flex;
+            flex-direction: column;
+
+            div {
+              margin: 1px;
+
+              div {
+                border: 2px solid #2F4553;
+                border-radius: 3px;
+                cursor: pointer;
+                position: relative;
+              }
+            }
+          }
+
+          .main>div {
+            display: flex;
+          }
+        }
+      }
+
+      .bottom {
+        flex: 2 2 0;
+      }
+
+      .number_list {
+        flex: 3 3 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+
+        div {
+          border-radius: 5px;
+          margin: 2px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .controls {
+    flex: 1 1 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+      display: flex;
+      align-items: center;
+      margin: 20px;
+      cursor: pointer;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.red {
+  background-color: #FE2247;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grey {
+  position: relative;
+  background-color: #2F4553;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grey_color {
+  background-color: #2F4553 !important;
+  div {
+    color: rgb(175, 198, 224) ;
+  }
+  .AmountField {
+    height: 40px !important;
+  }
+  .IconValue {
+    height: 33px !important;
+  }
+  .AutoActionValue, .Value {
+    padding-top: 0 !important;
+  }
+  .ValueIcon {
+    height: 33px !important;
+  }
+  .AutoActionValue, .SelectedAction, .AutoAction, .CanvasField, .Value, .Action {
+    height: 33px !important;
+    display: flex;
+    align-items: center;
+  }
+  .ValueDivider {
+    margin-top: 0 !important;
+  }
+  .AmountField {
+    background-color: transparent;
+  }
+  button {
+    background-color: #00e701 !important;
+  }
+}
+
+.grey_dark {
+  background-color: #23333d !important;
+  padding-top: 20px;
+  .dicetab-list-active {
+    border-top-left-radius: 0px !important;
+  }
+}
+
+.grey_color1 {
+  background-color :rgba(13, 20, 38, .6) !important;
+  .left_arrow {
+    background-color: #3e5261;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .right_arrow {
+    background-color: #3e5261;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+}
+
+.green {
+  position: relative;
+  background-color: #419e3f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.board {
+  display: flex;
+  align-items: center;
+  border-radius: 5px !important;
+  justify-content: space-between;
+  height: 42px !important;
+  background-color: #3e5261 !important;
+  .left_arrow {
+    padding: 4.3px 15px;
+    cursor: pointer;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+  .right_arrow {
+    padding: 4.3px 15px;
+    cursor: pointer;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+
+  }
+  .chip {
+    overflow: hidden;
+    display: flex;
+    background-color: #2f4553;
+    padding: 3px 14px;
+    .chip_area {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .chip_pad {
+      margin: 0px 10px;
+      width: 33px;
+      height: 32px;
+    }
+    .chip_text {
+      position: absolute;
+      text-align: center;
+      color: black;
+    }
+  }
+}
+
+.select {
+  img {
+    border-radius: 50%;
+    box-shadow: 1px 0px 10px white;
+  }
+}
+
+.Roulette-GameTabs {
+  width: 100%;
+}
+
+.Roulette-GameTabs .Header {
+  width: 100%;
+  min-height: 100px;
+}
+
+.Roulette-GameTabs .TabHeading {
+  font-size: 90px;
+  padding-right: 150px;
+}
+
+.Roulette-GameTabs .dicetab-list {
+  width: 100%;
+  font-weight: 600;
+  padding: 0 !important;
+  touch-action: manipulation;
+  position: relative;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  height: 55px;
+  align-items: center;
+  transition: background 300ms ease 0s, opacity 300ms ease 0s, transform 100ms ease 0s;
+  color: rgb(132, 136, 155);
+  background: #304453;
+  border-top-left-radius: 20px;
+  padding-top: 10px !important;
+  box-shadow: none;
+}
+
+.Roulette-GameTabs .dicetab-list-item img {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.Roulette-GameTabs .dicetab-list-item span {
+  font-size: 0.875rem !important;
+}
+
+.Roulette-GameTabs .dicetab-list-item {
+  flex: 1 1 0%;
+  line-height: 1;
+  height: 45px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.Roulette-GameTabs .dicetab-list-item:hover {
+  color: rgba(255, 157, 0, .8);
+}
+
+.Roulette-GameTabs .dicetab-list-item:last-child {
+  width: 50px;
+}
+
+
+.Roulette-GameTabs .dicetab-list-active:first-child {
+}
+
+.Roulette-GameTabs .dicetab-list-active {
+  border-width: 1px 1px 0 1px;
+  color: rgb(255, 157, 0);
+  //border-bottom: 2px solid rgb(255, 157, 0);
+  border-radius: 24px !important;
+  background-color: #1a2c38 !important;
+}
+
+.text-green {
+  color: #34f134;
+}

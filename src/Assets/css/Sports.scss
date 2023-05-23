@@ -1,0 +1,425 @@
+@import "Colours";
+
+.SportsBetting {
+  width: 100%;
+  height: 100%;
+  margin-top: 105px;
+
+  .ClassificationBar {
+    width: 100%;
+    height: 70px;
+    background: #3d3f45;
+    border-bottom: 2px solid $primary-blue;
+    display: inline-flex;
+
+    .ClassificationBarButton {
+      cursor: pointer;
+      height: 55px;
+      max-width: 100px;
+      padding: 10px 12px 5px;
+      position: relative;
+    }
+
+    .Active {
+      border-bottom: 2px solid $primary-blue;
+    }
+
+    .ClassificationBarButton_Icon {
+      margin: 0 auto;
+    }
+
+    .ClassificationBarButton_Text {
+
+      text-overflow: ellipsis;
+      overflow: hidden;
+      color: #9c9c9c;
+      font-size: 11px;
+      line-height: 17px;
+      padding-top: 6px;
+      text-align: center;
+      white-space: nowrap;
+    }
+  }
+
+  .Sport {
+    display: inline-flex;
+    width: 100%;
+    min-height: 100%;
+
+    .SportsContainer {
+      width: 68%;
+      height: 100%;
+      background: #f4f4f4;
+      overflow-x: hidden;
+      padding-right: 1%;
+    }
+
+    .SportsInPlay {
+      width: 32%;
+      min-height: 100%;
+      background: #e8e8e8;
+      border-left: 1px solid #c7c5c5;
+
+      .SportsPanel {
+        min-height: 100%;
+
+
+        .BetSlip {
+          position: sticky;
+          bottom: 0;
+          height: 1260px;
+          background: #e8e8e8;
+
+
+          .locker-tabs {
+            width: 100%;
+          }
+          .locker-tab-list {
+            padding: 0;
+            margin: 0;
+            width: calc(100% - 20px);
+            background-color: transparent;
+            height: 80px;
+            border-bottom: solid 1px #d0d0d3 !important;
+            z-index: 10;
+          }
+
+          .locker-tab-list-item img {
+            margin-top: 5px;
+            margin-left: 10px;
+          }
+
+          .locker-tab-list-item {
+            display: inline-flex;
+            list-style: none;
+            float: left;
+            width: 50%;
+            padding: 0 !important;
+            font-weight: 600;
+            font-size: 14px !important;
+            touch-action: manipulation;
+            position: relative;
+            display: inline-flex;
+            -webkit-box-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            align-items: center;
+            transition: background 300ms ease 0s, opacity 300ms ease 0s, transform 100ms ease 0s;
+            color: rgb(68, 68, 68);
+            margin: 0;
+            align-items: center;
+            background-color: #f2f2f7;
+            border: 0;
+            border-radius: 0;
+            box-shadow: 0 0 2px 0 rgba(0, 0, 0, .25);
+            color: #474752;
+            flex: 1 1 100%;
+            height: 80px;
+          }
+          .locker-tab-list-icon {
+            width: 10%;
+            display: none;
+            padding-top: 20px !important;
+            font-size: 32px !important;
+          }
+
+          .locker-tab-list-item:hover {
+            color: $primary-blue;
+          }
+
+          .locker-tab-list-active {
+            border-width: 1px 1px 0 1px;
+            border-bottom: none !important;
+            color: $primary-blue;
+            border-top-right-radius: 4px;
+            border-top-left-radius: 4px;
+            background: white;
+          }
+
+          .locker-tab-content {
+          }
+
+          .CurrentSlip {
+            overflow-y: scroll;
+            width: 100%;
+
+            h3 {
+              text-align: left;
+              margin: 0;
+              padding: 10px;
+            }
+
+            .Slip {
+              width: 90%;
+              margin: 5%;
+              min-height: 110px;
+              background: white;
+              border-radius: 3px;
+              box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .16);
+
+              .SlipHeader {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                display: inline-flex;
+                font-size: 13px;
+                height: 15px;
+
+                input[type='checkbox'] {
+                  margin-left: 10px;
+                  width: 15px;
+                  height: 15px;
+                  margin-top: 10px;
+                  margin-right: -2px;
+                }
+
+                .SlipTitle {
+                  width: calc(100% - 30px);
+                  color: #73737d;
+                  display: inline-flex;
+                }
+
+                .SlipAction {
+                  width: 30px;
+                  margin: 5px;
+                  color: #73737d;
+                  font-weight: 100;
+                  font-size: 14px;
+                }
+              }
+
+              .SlipOdds {
+                width: 100%;
+                display: inline-flex;
+                height: 35px;
+                margin: 0;
+
+                .SlipOption {
+                  width: 50%;
+                  font-weight: bold;
+                }
+
+                .SlipOddsValue {
+                  width: 50%;
+
+                  span {
+                    width: 90%;
+                    text-align: right;
+                  }
+                }
+              }
+
+              .SlipOfferings {
+                width: 100%;
+                display: inline-flex;
+
+                .CurrencyValue {
+                  width: 50%;
+
+                  input {
+                    width: 100px;
+                    height: 30px;
+                    margin-left: 5%;
+                    float: left;
+                    border: 1px solid #d5d5d8;
+                    border-radius: 5px;
+                    text-align: right;
+                  }
+
+                  input:focus {
+                    border: 1px solid $primary-blue;
+                  }
+
+                  .Error {
+                    border: 1px solid #bb3838 !important;
+                  }
+
+                  ::placeholder {
+                    color: #d5d5d8;
+                    opacity: 1; /* Firefox */
+                  }
+
+                  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+                    color: #d5d5d8;
+                  }
+
+                  ::-ms-input-placeholder { /* Microsoft Edge */
+                    color: #d5d5d8;
+                  }
+                }
+
+                .PotentialReturns {
+                  width: 50%;
+
+                  p {
+                    margin: 0;
+                    padding: 0;
+                    height: 15px;
+                    text-align: right;
+                    color: #73737d;
+                    font-size: 12px;
+                    width: 95%;
+                  }
+
+                  span {
+                    margin: 0;
+                    padding: 0;
+                    height: 10px;
+                    width: 95%;
+                    text-align: right;
+                    font-weight: bold;
+                    font-size: 13px;
+                  }
+                }
+              }
+            }
+
+            span {
+              margin: 0;
+              padding: 10px;
+              float: left;
+              text-align: left;
+            }
+
+          }
+
+          .SlipFooter {
+            background: #e8e8e8;
+            position: fixed;
+            bottom: 0;
+            margin: 0;
+            width: 31%;
+            text-align: left;
+
+            .SlipFooterContents {
+              padding: 0% 2%1% 2%;
+            }
+
+            .Disclaimer {
+              font-size: 11px;
+              height: 30px;
+              color: #73737d;
+              line-height: 30px;
+            }
+
+            .BetSummary {
+              width: 100%;
+
+              span {
+                margin-bottom: 5px;
+              }
+
+              .TotalStakes {
+                width: 100%;
+
+                .TotalPotentialReturns {
+                  display: inline-flex;
+                  width: 50%;
+
+                  span {
+                    width: 100%;
+                    text-align: right !important;
+                  }
+                }
+
+                .TotalStake {
+                  display: inline-flex;
+                  width: 100%;
+
+                  span {
+                    font-weight: bold;
+                  }
+
+                  .Header {
+                    width: 50%;
+                    text-align: left;
+                  }
+                }
+
+                .PotentialReturns {
+                  display: inline-flex;
+                  width: 100%;
+
+                  span {
+                    font-weight: bold;
+                  }
+
+                  .Header {
+                    width: 50%;
+                    text-align: left;
+                  }
+                }
+
+              }
+
+            }
+
+            .BetAction {
+              width: 100%;
+              display: inline-flex;
+
+              button {
+                border: 0;
+                border-radius: 4px;
+                color: #fff;
+                cursor: pointer;
+                display: flex;
+                font-weight: 700;
+                height: 36px;
+                justify-content: flex-start;
+                margin: 0;
+                outline: 0;
+                padding: 9px 15px 11px;
+              }
+
+              .Discard {
+                width: 50px;
+                flex-direction: row-reverse;
+
+                button {
+                  background-color: #bb3838;
+                }
+
+                button:hover {
+                  background-color: #932929;
+                }
+              }
+
+              .Login {
+                width: calc(100% - 50px);
+
+                button {
+                  width: 100%;
+                  background-color: #d5d5d8;
+                  //float: right;
+                  margin-right: 5%;
+                  box-shadow: none;
+                  color: #474752;
+                  p {
+                    padding: 0;
+                    padding-top: 2px;
+                    margin: 0;
+                    width: 100%;
+                  }
+                }
+                button:hover {
+                  color: #fff;
+                  background-color: $primary-blue;
+                }
+
+                .Active {
+                  background-color: $primary-blue;
+                  color: white;
+                }
+                .Active:hover {
+                  color: #fff;
+                  background-color: $primary-blue;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

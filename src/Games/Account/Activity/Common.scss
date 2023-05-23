@@ -1,0 +1,393 @@
+$secondary-default: rgba(39, 59, 73, 0.35);
+$primary-white: #fff;
+$pure-black: black;
+$black-background: rgb(0, 8, 9);;
+$not-full-black: rgb(19, 19, 19);
+$grey-second: #131722;
+$gray: #282c34;
+$light-grey: #393e46;
+$dark-blue: rgba(29,61,101,1);
+$dark-blue: rgb(26, 117, 250);
+$light-gray: #7e88a8;
+$primary-blue: rgb(26, 117, 250);
+$primary-gold: rgb(253, 203, 1);
+$font-secondary-grey: #7e88a8;
+$blue-dark:rgba(81, 168, 255, 0.3);
+$lighter-50: rgb(70, 87, 117);
+$primary-blue: #d3e5fd;
+$secondary-blue: #215564;
+$secondary-blue-30: rgba(81, 168, 255, 0.3);
+$secondary-blue-60: rgba(81, 168, 255, 0.6);
+$primary-background: rgba(0, 33, 70, 0.6);
+$primary-background-darker: rgba(0, 33, 70, 0.8);
+$primary-background-darker-90: rgba(0, 33, 70, 0.9);
+$primary-background-darker-95: rgba(0, 33, 70, 0.95);
+$primary-background-darker-100: rgb(0, 33, 70);
+$regular-color: #b2b5be;
+$regular-bg-color: #1e222d;
+$financial-title: #838aa1;
+$primary-red: #ff0000;
+
+::-webkit-scrollbar{
+  width:5px;
+  height:5px;
+}
+
+::-webkit-scrollbar-corner{
+  display:none
+}
+
+::-webkit-scrollbar-track{
+  background:rgba(0,0,0,.2);
+  -webkit-border-radius: 5px;
+  border-radius: 5px
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-image: linear-gradient(to top, #1b1b1b 0,#282828);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background-image: linear-gradient(to top,#1b1b1b 0,#1b1b1b);
+  opacity:.5;
+}
+
+.CurrentDay {
+  display: inline-flex;
+  left: 10px;
+  top: 2px;
+
+  .CurrentDayValue {
+    padding-right: 15px;
+    color: $primary-blue;
+    display: inline-flex;
+
+    p {
+      padding-top: -1px;
+    }
+
+    span {
+      margin-left: 10px;
+      font-size: 16px;
+    }
+  }
+
+  .Negative {
+    color: #ef534f !important;
+  }
+
+  .Positive {
+    color: #35a698 !important;
+  }
+}
+
+
+
+.ChartTooltip {
+  color: $primary-white;
+  padding: 5px;
+  background-color: #363a45;
+  display: inline-flex;
+  text-transform: uppercase;
+  margin-left: -40px;
+  font-size: 11px;
+  color: #4fd3f6;
+}
+
+.ChartTooltip span {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.ChartTooltip ul {
+  list-style: none;
+}
+
+.ChartTooltip li {
+  text-align: left;
+  padding: 10px;
+  width: 100%;
+}
+
+.ChartTooltip .Headings {
+  float: left;
+}
+
+.ChartTooltip .Values {
+  width: 50%;
+  float: right;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.Compared {
+  width: 100%;
+  display: block;
+}
+
+.Compared ul {
+  width: 100%;
+  list-style: none;
+  display: inline-flex;
+}
+
+.Compared ul li {
+  width: 20%;
+}
+
+.Chart {
+  margin-left: 5%;
+}
+
+input[type="date"] {
+  background-color: transparent;
+  border: 1px solid #0cff0a;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+}
+
+
+
+.performance_title {
+  color: #b2b5be;
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 17px;
+  margin-bottom: 8px;
+  text-align: start;
+}
+
+.performance_cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.performance_card {
+  align-items: center;
+  background: #80cbc41a;
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 8px;
+  margin-right: 8px;
+  width: calc(33.33333% - 8.33333px);
+
+  .performance_percentage {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: -1px;
+    padding-top: 1px;
+    opacity: 1;
+  }
+
+  .performance_period {
+    color: #9598a1;
+    font-size: 11px;
+    opacity: 1 !important;
+    letter-spacing: .4px;
+    line-height: 16px;
+    margin-top: -2px;
+    padding-bottom: 2px;
+    text-transform: uppercase;
+  }
+}
+.ResponsiblityRating {
+  width: 260px;
+  margin-left: calc(50% - 130px);
+}
+.CompanyInformationSection {
+  min-height: 220px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.scatter-container {
+  color: #b2b5be;
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 17px;
+  margin-bottom: 8px;
+
+  .scatter-container-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .scatter-container-next {
+      display: flex;
+      font-size: 13px;
+      font-weight: 500;
+
+      span {
+        font-size: 13px;
+
+        &:first-child {
+          color: #787b86;
+        }
+
+        &:last-child {
+          color: #b2b5be;
+        }
+      }
+
+      .scatter-container-next-date {
+        color: #b2b5be;
+        margin-left: 4px;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.sorting-date {
+  display: flex;
+  justify-content: space-between;
+  height: 37px;
+  align-items: center;
+  border: 1px solid var(--tv-color-platform-background, #2a2e39);
+
+  &__left {
+    display: flex;
+    justify-content: left;
+    margin: 5px 15px;
+    color: #d9d9dc;
+    padding: 0;
+
+
+    li {
+      position: relative;
+      min-width: 30px;
+      margin: 0 8px;
+      padding: 2px;
+      font-size: 14px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: .5s;
+      font-weight: 400;
+
+      &:hover {
+        background-color: rgba(54, 56, 59, 0.91);
+        border-radius: 2px;
+
+        .active-title {
+          padding: 3px;
+          white-space: nowrap;
+          text-align: center;
+          color: #e4e4e7;
+          background-color: rgba(94, 95, 96, 0.91);
+          font-size: 12px;
+          font-weight: normal;
+          transition: 0.8s;
+          opacity: 1;
+          top: -25px;
+          z-index: 1;
+          text-transform: none;
+          border-radius: 2px;
+
+        }
+      }
+    }
+
+    .active {
+      color: #4684f6;
+      border-bottom: 2px solid #4684f6;
+    }
+
+    .active-title {
+      position: absolute;
+      min-width: 30px;
+      margin: 0 8px;
+      padding: 2px;
+      left: -10%;
+      opacity: 0;
+      z-index: -1;
+
+    }
+  }
+
+  &__right {
+    color: #d9d9dc;
+    font-size: 16px;
+    margin: 0 20px;
+    line-height: 1;
+  }
+}
+
+.financial-speedometer {
+  width: 75%;
+  overflow: scroll;
+}
+
+.speedometer {
+  position: relative;
+  width: 250px;
+  height: 150px;
+
+  .speedometer-center {
+    position: absolute;
+    bottom: 0;
+    right: 40%;
+    width: 20%;
+    height: 20%;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    background: linear-gradient(180deg, rgb(40, 41, 44), #131722 95%);
+  }
+
+  &__bg {
+    position: absolute;
+    width: 80%;
+    height: 70%;
+    left: 10%;
+    top: 29%;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  }
+}
+
+.speedometer-data {
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+
+    span {
+      font-size: 27px;
+      font-weight: 500;
+    }
+
+    .one {
+      color: #f44336;
+    }
+
+    .two {
+      color: #5d606b;
+    }
+
+    .three {
+      color: #2962ff;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+
+    span {
+      transition: 0.4s;
+      color: #b2b5be;
+      font-size: 16px;
+      font-weight: normal;
+    }
+  }
+}

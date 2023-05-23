@@ -1,0 +1,225 @@
+@import "Colours";
+
+select:focus {
+  outline: none;
+}
+
+@media (max-width: 865px) {
+  .App {
+    overflow-x: hidden;
+    .HeaderLinks {
+      background: rgba(34,34,34,1);
+    }
+  }
+  .BetlockerSplash .top-banner__background-gradient .Promo {
+    .Header {
+      h3 {
+        font-size: 4vw !important;
+        white-space: nowrap;
+      }
+      span {
+        white-space: nowrap;
+        font-size: 4vw !important;
+      }
+    }
+    .Action {
+      button {
+        min-width: 100px;
+        float: right;
+      }
+    }
+  }
+  .BetlockerSplash .Offers .Offer {
+    min-width: 100% !important;
+  }
+
+  .Alt-header-mobile .Betlocker-Mobile-Header {
+
+    .Searchbar .SearchbarInput {
+      width: calc(80% - 25px);
+    }
+
+    .Betlocker-Tabs .Games-Navigation::-webkit-scrollbar{
+      display: none;
+    }
+    .Betlocker-Tabs .Games-Navigation {
+      max-width: calc(100% - 70px);
+      padding-left: 10px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      scrollbar-height: none;
+      height: -moz-fit-content;
+      height: fit-content;
+
+      ul li {
+
+        height: 50px;
+        min-width: 100px;
+        white-space: nowrap;
+        cursor: pointer;
+      }
+    }
+
+    .MainContainer {
+      .HeaderSpace {
+        width: 70px;
+      }
+
+      .Logo-Area {
+        width: calc(100% - 170px);
+      }
+
+      .Login {
+        width: 100px;
+      }
+    }
+  }
+
+  /* Tab options into dropdown */
+  .sportsLargeTab {
+    visibility: hidden;
+    width: 0 !important;
+    height: 0 !important;
+  }
+  .tab-list-mobile {
+    visibility: visible;
+    font-size: 16px;
+    width: 10% !important;
+    min-width: 120px;
+    height: 20px;
+  }
+
+  .FeaturedMatches {
+    margin-top: -25px !important;
+  }
+
+  .App-footer {
+    .HelpfulLinks {
+      padding: 0 !important;
+    }
+  }
+  .App-footer-legislatures .BetLockerSplash .BetLockerInfo {
+    width: 100%;
+    //padd
+  }
+
+  .RollSlider {
+    width: 70% !important;
+    margin-left: 0% !important;
+  }
+
+  .LiveBets {
+    width: 100% !important;
+    padding: 0% !important;
+  }
+
+  .SwitchboardValues {
+    padding-left: 100px;
+  }
+
+  .LiveBetsTableHeaders {
+    padding-left: 50px;
+  }
+
+}
+
+@media (max-width: 1265px) {
+
+  .WagerTable {
+    margin-left: 0 !important;
+  }
+
+  .SportsBetting {
+    .Sport {
+      display: block;
+      width: 100%;
+      min-height: 100%;
+
+      .SportsContainer {
+        width: 100% !important;
+        height: 100%;
+        background: #f4f4f4;
+        padding-right: 1%;
+      }
+
+      .SportsInPlay {
+        position: fixed;
+        z-index: 100;
+        bottom: 0;
+        left: 0;
+        border-top: 5px solid $primary-blue;
+        min-height: 10% !important;
+        height: 80px !important;
+        width: 100% !important;
+
+        .SportsPanel {
+
+            .BetSlip {
+
+              .locker-tab-list-item {
+                width: 45% !important;
+              }
+              .locker-tab-list-icon {
+                display: unset !important;
+                width: 10% !important;
+                color: $primary-blue !important;
+              }
+
+              .CurrentSlip {
+
+                .Slip {
+
+                  .SlipOdds .SlipOddsValue span {
+                    width: 93% !important;
+                  }
+
+                  .SlipOfferings .CurrencyValue input {
+                    margin-left: 2% !important;
+                  }
+                }
+              }
+
+            }
+
+          .SlipFooter {
+            width: 100% !important;
+            height: 120px;
+            margin: 0 !important;
+          }
+
+          .SlipFooterContents {
+            padding: 0% 2% 0% 2%;
+          }
+        }
+      }
+
+      .SportsInPlayVisible {
+        bottom: calc(100% - 190px) !important;
+        transition-property: all;
+        transition-duration: 1s;
+        transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+      }
+
+      .SportsInPlayInVisible {
+        bottom: -10px;
+        transition-property: all;
+        transition-duration: 1s;
+        transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+      }
+
+    }
+  }
+
+  .locker-tabs {
+    overflow-x: scroll;
+  }
+
+  .locker-tab-list {
+    overflow: hidden;
+    width: 100% !important;
+    display: inline-flex;
+  }
+
+}

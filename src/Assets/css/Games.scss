@@ -1,0 +1,656 @@
+@import "Colours";
+
+@font-face {
+  font-family: onyxfont;
+  src: url("http://localhost:3000/assets/Fonts/Montserrat-VariableFont_wght.ttf");
+  //src: url("https://entertheprivatesociety.com/Montserrat-VariableFont_wght.ttf");
+}
+
+.HeadingSpace {
+  padding-top: 100px;
+}
+
+.LiveBets {
+  width: 100%;
+  background-color: rgba(34, 34, 34, 0.96);
+  min-height: 600px;
+}
+
+.locker-tab-list-item {
+  color: white;
+}
+
+.LiveBetsTabs {
+  width: 100%;
+  padding: 0 !important;
+  margin: 0 !important;
+
+  .locker-tab-list .locker-tab-list-item {
+    padding-top: 50px !important;
+    padding-bottom: 30px !important
+  }
+}
+
+.LiveBetsTabs .Header {
+  width: 100%;
+  min-height: 100px;
+}
+
+.LiveBetsTabs .TabHeading {
+  font-size: 90px;
+}
+
+.LiveBetsTable {
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.LiveBetsTable .LiveBetsTableHeaders {
+  height: 50px;
+}
+
+.LiveBetsTable .LiveBetsTableBody .SwitchboardValues {
+  display: flex;
+  justify-content: space-evenly;
+  color: rgba(255, 255, 255, 0.78);
+  cursor: pointer;
+  user-select: none;
+}
+
+.LiveBetsTable .LiveBetsTableBody .SwitchboardValues td {
+  min-width: 220px;
+  width: 14.2%;
+}
+
+.LiveBetsTable ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.LiveBetsTable li {
+  padding-top: 10px;
+  width: 14.2%;
+  min-width: 100px;
+  color: white;
+}
+
+.BetlockerSplash {
+  width: 100%;
+  height: 100%;
+  font-family: onyxfont;
+  .top-banner {
+    height: 731.25px;
+    position: absolute;
+  }
+
+  .GameContainer {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flow-root;
+    margin-top: -100px;
+    padding-top: 100px;
+  }
+
+
+  button {
+    background-color: #00e0ff;
+    border-radius: 10px;
+    min-width: 150px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    font-size: 20px;
+    color: #222;
+    letter-spacing: -.58px;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    font-family: onyxfont;
+    height: 50px;
+    line-height: 50px;
+    font-weight: 600;
+    font-size: 25px;
+    min-width: 200px;
+    letter-spacing: -.72px;
+    border: none;
+    margin-right: 10px;
+  }
+
+  h2 {
+    color: $primary-blue;
+    font-size: 42px;
+  }
+
+  h3 {
+    color: $primary-blue;
+    font-size: 32px;
+  }
+
+  .Offers {
+    padding-top: 95px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .Offer {
+      width: 50%;
+      min-width: 600px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 488px;
+
+      p {
+        color: white;
+        font-size: 10px;
+        text-align: left;
+        padding: 10px;
+        font-weight: 500;
+      }
+
+      button {
+        border-radius: 10px;
+        min-width: 150px;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 15px;
+        font-size: 20px;
+        color: #222;
+        letter-spacing: -.58px;
+        text-align: center;
+        box-sizing: border-box;
+        cursor: pointer;
+        display: inline-block;
+        text-decoration: none;
+      }
+
+      .offer-banner__header-container {
+        padding-top: 100px;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+        align-items: center;
+        height: calc(100% - 100px);
+        justify-content: flex-end;
+
+        .offer-banner__header-text {
+          font-family: "FuturaPTWebBook",Futura,Arial,sans-serif;
+          font-size: 40px;
+          line-height: 40px;
+          vertical-align: middle;
+          margin-bottom: 20px;
+          margin-top: 10px;
+          color: #fff;
+          letter-spacing: -1.5px;
+        }
+        .offer-banner__sub-header-text {
+          color: #fff;
+          font-family: "FuturaPTWebBook",Futura,Arial,sans-serif;
+          font-size: 20px;
+          line-height: 25px;
+          vertical-align: middle;
+          margin-bottom: 25px;
+        }
+      }
+
+      .offer-banner__background-overlay {
+        height: 100%;
+        width: 100%;
+        bottom: 0;
+        background: linear-gradient(to top,#1b1b1b,rgba(27,27,27,0));
+      }
+
+    }
+  }
+
+  h5 {
+    color: $primary-blue;
+    font-size: 1.8vw;
+  }
+
+  .LeftAligned {
+    text-align: left;
+  }
+  .SaferGamblingMissionStatement {
+    padding-left: 10%;
+    padding-right: 10%;
+
+    ul {
+      list-style: none;
+
+      li {
+        display: inline-flex;
+        width: 100%;
+        p {
+          text-align: left;
+          color: white;
+          font-size: 16px !important;
+          padding: 20px;
+        }
+
+        svg {
+          font-size: 26px;
+          padding: 10px;
+          width: 23px;
+          height: 25px;
+          color: white;
+          background: $primary-blue;
+          border-radius: 50px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  .AltContainer {
+    min-height: 600px;
+
+    .SearchResult {
+      width: 100%;
+      min-height: 1000px;
+      padding-top: 100px;
+      text-align: left;
+
+      .SearchResultExamples {
+        padding-top: 10px;
+        width: 100%;
+        color: #ddd;
+        border-bottom: 2px solid #444;
+        padding-left: 15px;
+        font-size: 14px;
+      }
+
+      ul {
+        list-style: none;
+
+        li {
+          color: white;
+          height: 45px;
+          font-size: 14px;
+
+          svg {
+            padding-left: 5px;
+            color: #767575;
+          }
+        }
+      }
+    }
+
+    .MoreInfo {
+      margin: 35px;
+    }
+
+    .MoreInfoAction {
+      margin-top: 80px;
+    }
+
+    .SaferGamblingOptions {
+      width: 50%;
+      min-width: 400px;
+      margin-left: 25%;
+      margin-right: 25%;
+      display: inline-flex;
+      height: 100px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+
+
+      .Option {
+        width: 25%;
+        display: grid;
+        img {
+          width: 40%;
+          margin-left: 30%;
+          font-size: 32px;
+        }
+        span {
+          width: 100%;
+        }
+      }
+    }
+    span {
+      width: 100%;
+      color: white;
+    }
+  }
+  .top-banner__background-gradient {
+    margin-top: -206px;
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    //background-image: linear-gradient(transparent, #222);
+    background: linear-gradient(to bottom, transparent 0%, #14151d 100%);
+
+    .Promo {
+      width: 100%;
+      display: inline-flex;
+      padding-top: 100px;
+
+      .Header {
+        width: calc(100% - 250px);
+        height: 200px;
+        text-align: left;
+        color: white;
+
+        h3 {
+          font-size: 32px;
+          line-height: 30px;
+          padding: 5px;
+          padding-left: 15px;
+          margin: 0;
+        }
+
+        span {
+          margin: 0;
+          font-size: 16px;
+          height: 10px;
+          line-height: 15px;
+          padding: 5px;
+          padding-left: 15px;
+        }
+      }
+
+      .Action {
+        width: 250px;
+        height: 200px;
+      }
+    }
+
+  }
+  .top-banner__background-container {
+    -webkit-mask: -webkit-gradient(
+                    linear,
+                    left 45%,
+                    left 0%,
+                    from(rgba(0, 0, 0, 1)),
+                    to(rgba(0, 0, 0, 0))
+    );
+    background: #222;
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100vw;
+  }
+  .top-banner__background-container-alt {
+    -webkit-mask: -webkit-gradient(
+                    linear,
+                    left 45%,
+                    left 0%,
+                    from(rgba(0, 0, 0, 1)),
+                    to(rgba(0, 0, 0, 0.8))
+    );
+    background: #222;
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100vw;
+  }
+}
+
+video {
+  height: 731.25px;
+  object-fit: cover;
+}
+
+
+
+.FairnessCanvas .CanvasField {
+  width: 100%;
+  height: 50px;
+}
+
+.FairnessCanvas .QRField {
+  width: 100%;
+  padding: 25px;
+  height: 200px;
+  background: rgba(20, 13, 38, .6);
+  border: 1px solid rgba(155, 159, 174, .1);
+  border-radius: 5px;
+  display: flex;
+}
+
+.FairnessCanvas .QRField img {
+  margin-left: calc(50% - 75px) !important;
+}
+
+.FairnessCanvas .AmountField {
+  width: 100%;
+  height: 50px;
+  //background: rgba(20, 13, 38, .6);
+  border: 1px solid rgba(155, 159, 174, .1);
+  border-radius: 5px;
+  display: inline-flex;
+}
+
+.FairnessCanvas .AmountField .Currency {
+  /*height: 50px !important;*/
+  margin: 0 !important;
+  width: 25px;
+  height: 25px;
+  margin-left: -10px !important;
+}
+
+.FairnessCanvas .AmountField .Value {
+  width: calc(100% - 150px);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  margin: 2px;
+  height: 45px;
+  text-align: center;
+  padding-top: 10px;
+  display: inline-flex;
+}
+
+.FairnessCanvas .AmountField .IconValue {
+  width: 100%;
+  background: #1f1f1f;
+  border-radius: 5px;
+  margin: 2px;
+  height: 45px;
+  text-align: center;
+  font-weight: 600;
+  font-size: inherit;
+  text-transform: uppercase;
+  border-radius: 5px;
+  touch-action: manipulation;
+  position: relative;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  transition: background 300ms ease 0s, opacity 300ms ease 0s, transform 100ms ease 0s;
+  line-height: 1.5;
+  color: rgb(132, 136, 155);
+}
+
+.FairnessCanvas .AmountField .IconValue .ProfitValue {
+  width: calc(100% - 50px);
+  overflow: hidden;
+}
+
+.FairnessCanvas .AmountField .IconValue .ProfitValueCopy {
+  width: calc(100% - 100px);
+  cursor: pointer;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.FairnessCanvas .AmountField .IconValue .ProfitValueChange {
+  cursor: pointer;
+  width: calc(100% - 100px);
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.FairnessCanvas .AmountField .IconValue .ProfitCopyButton img {
+  margin-top: 5px;
+}
+
+.FairnessCanvas .AmountField .IconValue .ProfitCopyButton {
+  width: 50px;
+  height: 40px;
+  background-color: rgba(20, 13, 38, 1);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+  padding-top: 10px;
+}
+
+.FairnessCanvas .AmountField .IconValue .ProfitChangeButton {
+  width: 100px;
+  height: 40px;
+  background-color: rgba(20, 13, 38, 1);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding-top: 10px;
+}
+
+.FairnessCanvas .AmountField .IconValue .ProfitNonceButton img {
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+.FairnessCanvas .AmountField .IconValue .ProfitNonceButton {
+  width: 50px;
+  height: 48px;
+  background-color: rgba(20, 13, 38, 1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding-top: 10px;
+}
+
+.FairnessCanvas .AmountField .IconValue .ProfitCurrency {
+  width: 50px;
+}
+
+.FairnessCanvas .AmountField .IconValue img {
+}
+
+.FairnessCanvas .AmountField .Icon {
+  width: 50px;
+  height: 50px;
+}
+
+.FairnessCanvas .CanvasRow .ThresholdList {
+  display: inline-flex;
+  width: 100%;
+}
+
+.FairnessCanvas .CanvasRow .ThresholdList .Threshold {
+  background: rgba(20, 13, 38, .6);
+  border: 1px solid rgba(155, 159, 174, .1);
+  margin: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  width: 33%;
+  text-align: left;
+  width: 100%;
+  text-align: left;
+  color: rgb(155, 159, 174);
+  transition: all 200ms ease-out 0s;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+
+.FairnessCanvas .CanvasRow .ThresholdList .ThresholdRow .ThresholdActionContainer {
+  background: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  border-radius: 5px;
+  margin: 2px;
+  height: 45px;
+  text-align: center;
+  padding-top: 10px;
+  display: inline-flex;
+}
+
+.FairnessCanvas .CanvasRow .ThresholdList .ThresholdRow .ThresholdAction {
+  width: calc(100% - 50px);
+}
+
+.FairnessCanvas .CanvasRow .ThresholdList .ThresholdRow .ThresholdActionIcon {
+  width: 20px;
+  margin-left: 20px;
+}
+
+.FairnessCanvas .CanvasRow .ThresholdList .ThresholdRow {
+  width: 100%;
+}
+
+.FairnessCanvas .CanvasRow {
+  width: 100%;
+  display: block !important;
+}
+
+.FairnessCanvas {
+  width: 100%;
+  margin: 0 !important;
+  margin-top: -10px !important;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 15px;
+}
+
+.FairnessCanvas input {
+  background: transparent;
+  border: none;
+  color: white;
+  width: 90%;
+}
+
+.FairnessCanvas input:focus {
+  outline: none;
+}
+
+.FairnessCanvas button {
+  height: 50px !important;
+  margin-left: calc(25% - 25px) !important;
+  margin-top: 25px !important;
+  width: 50% !important;
+}
+
+.RollSlider {
+  list-style: none;
+  margin-top: 3rem;
+  position: relative;
+  width: 60%;
+  border-radius: 50px;
+  margin-left: 20%;
+  height: 40px;
+  padding-top: 5px;
+  padding-left: 50px !important;
+  padding-right: 50px !important;
+  background: rgba(255, 255, 255, .1);
+  text-align: left;
+}
+
+@media (min-width: 1300px) {
+  .top-banner {
+    height: 731.25px;
+  }
+}
+@media (min-width: 600px) {
+  .top-banner__background-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+}

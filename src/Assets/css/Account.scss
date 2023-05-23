@@ -1,0 +1,624 @@
+@import "Colours";
+
+.AccountOverview {
+  margin-top: 75px;
+  padding-top: 25px;
+  width: 100%;
+  height: 100%;
+  border-right: 1px solid #3d3d3d;
+  display: inline-flex;
+
+  h3  {
+    padding-top: 10px;
+    margin: 0 !important;
+  }
+
+  .RecentActivity {
+    width: 400px;
+    height: 100%;
+    border-top: 1px solid #3d3d3d;
+    border-right: 1px solid #3d3d3d;
+    overflow-y: scroll;
+    background-color: #1b1b1b;
+
+    h3 {
+      background: #282828;
+      border-bottom: 1px solid #3d3d3d;
+      padding: 10px;
+    }
+  }
+
+  .Balance {
+    width: calc(100% - 400px);
+    border-top: 1px solid #3d3d3d;
+
+    .BalanceHeader {
+      width: 100%;
+      display: flex;
+
+      .BalanceTotal {
+        width: 100%;
+        justify-content: right;
+        height: 60px;
+        border-bottom: 1px solid #3d3d3d;
+
+        ul {
+          list-style: none;
+          display: inline-flex;
+          height: 60px;
+          padding: 0;
+          width: 100%;
+          margin: 0;
+
+          li {
+            color: #cecece;
+            height: 60px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+
+            span {
+              width: 100%;
+              font-size: 26px;
+              font-weight: 800;
+              padding: 10px;
+              color: #cecece;
+            }
+
+            .Heading {
+              width: 100%;
+              padding: 15px;
+              font-weight: 600;
+              font-size: 21px;
+              background: #282828;
+              color: #a3a3a3;
+            }
+          }
+        }
+      }
+
+      .BalanceBreakdown {
+        width: 20%;
+
+        ul {
+          list-style: none;
+          display: inline-flex;
+          width: 100%;
+          min-width: 170px;
+          height: 60px;
+          padding: 0;
+          margin: 0;
+          border-left: 1px solid #3d3d3d;
+          border-bottom: 1px solid #3d3d3d;
+
+          li {
+            color: #cecece;
+            height: 60px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            border-top: 1px solid #3d3d3d;
+
+            span {
+              width: 100%;
+              padding: 3px;
+              color: #cecece;
+            }
+
+            .Heading {
+              width: 100%;
+              color: #a3a3a3;
+              background: #282828;
+            }
+          }
+        }
+      }
+    }
+
+    .OverviewDetails {
+      display: inline-flex;
+      width: 100%;
+      height: 100%;
+
+      .AccountOffer{
+        width: 50%;
+        height: calc(100% - 65px);
+        background-color: #1b1b1b;
+        background-image: url('https://arspp.cdnppb.net/img/950x216_PP_BTD_Free_To_Play.jpg');
+        background-repeat: no-repeat;
+        border-right: 1px solid #3d3d3d;
+
+        .AccountOfferShadow{
+          width: 100%;
+          height: 219px;
+          padding-top: 130px;
+          background: linear-gradient(to top,#1b1b1b,rgba(27,27,27,0));
+
+          .offer-banner__header-container {
+            padding-top: 15%;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+            align-items: center;
+            height: calc(100% - 100px);
+            justify-content: flex-end;
+
+            .offer-banner__header-text {
+              font-family: "FuturaPTWebBook",Futura,Arial,sans-serif;
+              font-size: 40px;
+              line-height: 40px;
+              vertical-align: middle;
+              margin-bottom: 20px;
+              margin-top: 10px;
+              color: #fff;
+              letter-spacing: -1.5px;
+            }
+            .offer-banner__sub-header-text {
+              color: #fff;
+              font-family: "FuturaPTWebBook",Futura,Arial,sans-serif;
+              font-size: 20px;
+              line-height: 25px;
+              vertical-align: middle;
+              margin-bottom: 25px;
+            }
+          }
+
+        }
+
+      }
+      .AccountOverviewStats{
+        width: 50%;
+        overflow-y: scroll;
+        height: calc(100% - 65px);
+        background-color: #1b1b1b;
+        padding: 10px;
+
+        .StatusSymbol {
+          color: #a3a3a3;
+          margin-right: 7px;
+        }
+
+        .online {
+          color: #089981 !important
+        }
+
+        .MetricCard {
+          min-width: 350px;
+          color: white;
+          background-color: #1f1f1f;
+        }
+
+        ul {
+          list-style: none;
+          width: 100%;
+          padding: 1%;
+          margin-bottom: 100px;
+
+          li {
+            width: 100%;
+            padding: 5px;
+            display: inline-flex;
+            font-weight: 600;
+            text-align: left;
+            span {
+              color: #cecece;
+              width: 50%;
+            }
+            span:nth-child(2) {
+                font-weight: 600;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.TransactionHeader {
+  width: 100%;
+  display: inline-flex;
+  height: 80px;
+  padding: 20px 10px;
+
+  h3 {
+    text-align: left;
+    padding-top: 10px;
+    width: calc(100% - 100px);
+  }
+
+  button {
+  }
+}
+.Wallet {
+  padding-top: 100px;
+  width: 100%;
+  display: inline-flex;
+
+
+
+  .Deposit {
+    border-top: 1px solid #3d3d3d;
+    width: 50%;
+    padding: 5%;
+    border-right: 1px solid #3d3d3d;
+  }
+  .Withdraw {
+    border-top: 1px solid #3d3d3d;
+    padding: 5%;
+    width: 50%;
+  }
+
+  h3 {
+    font-size: 21px;
+  }
+
+  button {
+    margin: 0 !important;
+  }
+}
+
+
+.TransactionHistory {
+  padding-top: 100px;
+
+  .TransactionTable {
+    border-top: 1px solid #3d3d3d;
+    width: 100%;
+    padding: 2% 5%;
+    overflow-y: scroll;
+
+
+    .TableHeader {
+      background: #3d3d3d;
+      padding-top: 20px;
+      padding-bottom: 10px;
+    }
+
+    //li:nth-child(1) {}
+    //li:nth-child(2) {}
+    //li:nth-child(3) {}
+
+    ul {
+      list-style: none;
+      display: inline-flex;
+      color: white;
+      width: 100%;
+      justify-content: center;
+      text-align: left;
+    }
+
+    .TableValueRow {
+      background: rgba(61, 61, 61, 0.7);
+      padding-top: 10px;
+      padding-bottom: 5px;
+      width: calc(100% - 20px);
+
+      .Status {
+        margin-right: 60px;
+        border: 1px solid rgba(255, 221, 0, 1);
+        background: rgba(255, 221, 0, 0.3);
+        padding: 0;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      .Success {
+        border: 1px solid rgb(8, 255, 0);
+        background: rgba(8, 255, 0, 0.3);
+      }
+
+      .Error {
+        border: 1px solid rgba(255, 0, 0, 1);
+        background: rgba(255, 0, 0, 0.3);
+      }
+
+      span {
+        border: 1px solid rgb(255, 0, 30);
+        background: rgba(255, 0, 0, 0.4);
+        margin-left: 10px;
+        font-weight: 600;
+        padding: 2px;
+        font-size: 10px;
+      }
+    }
+
+  }
+}
+
+.MetricSplash {
+  width: 100%;
+  background: #1f1f1f;
+  border: 1px solid #3d3d3d;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 2%;
+
+  .MetricSplashFilter {
+    width: 100%;
+    display: inline-flex;
+    margin-bottom: 10px;
+
+    div {
+      width: calc(100% - 100px);
+    }
+    select {
+      margin-left: 15px;
+      border: none;
+      margin-top: -10px;
+      color: rgba(206, 206, 206, .6);
+      background: none;
+      float: right;
+    }
+  }
+}
+
+.AccountActivity {
+  padding-top: 100px;
+  width: 100%;
+
+  .Recent {
+    display: inline-flex;
+    width: 100%;
+
+    .BalanceHistory {
+      border-top: 1px solid #3d3d3d;
+      width: 20%;
+      padding: 1%;
+      min-width: 330px;
+      border-right: 1px solid #3d3d3d;
+
+
+      ul.Stats {
+        list-style: none;
+        width: 100%;
+        padding: 1%;
+
+        li {
+          width: 100%;
+          padding: 5px;
+          display: inline-flex;
+          font-weight: 600;
+          text-align: left;
+          span {
+            color: #cecece;
+            width: 50%;
+          }
+          span:nth-child(2) {
+            font-weight: 600;
+            color: #fff;
+          }
+        }
+      }
+
+    }
+
+    .Right {
+      width: 80%;
+      display: inline-flex;
+
+      .BalanceOCHL {
+        border-top: 1px solid #3d3d3d;
+        border-left: 1px solid #3d3d3d;
+        width: 50%;
+        padding: 1%;
+      }
+
+      .AccountSummary {
+        border-top: 1px solid #3d3d3d;
+        width: 50%;
+        padding: 1%;
+      }
+    }
+  }
+}
+
+.AccountSettings {
+  padding-top: 100px;
+  width: 100%;
+
+  .SettingsTabs {
+    width: 100%;
+    border-top: 1px solid #3d3d3d;
+
+    .locker-tabs {
+      display: inline-flex;
+    }
+
+    .locker-tab-list {
+      width: 150px;
+      height: 200px;
+      overflow: hidden;
+      border: none !important;
+
+      li {
+        margin-top: 10px;
+        height: 40px;
+      }
+      .locker-tab-list-item {
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        padding-top: 15px  !important;
+      }
+      .locker-tab-list-active {
+
+      }
+    }
+
+    .locker-tab-content {
+      width: calc(100% - 150px);
+      min-height: 600px;
+    }
+
+  }
+
+    .GeneralSettings {
+      width: 100%;
+      display: inline-flex;
+
+      .GeneralInformation {
+        border-right: 1px solid #3d3d3d;
+        width: 50%;
+        padding: 2%;
+        color: white;
+
+        button {
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+
+        .Heading {
+          font-weight: 800;
+        }
+
+        ul {
+          width: 100%;
+          list-style: none;
+
+          li {
+            display: inline-flex;
+            width: 40%;
+
+            ol {
+              width: 100%;
+              display: block;
+              height: 40px;
+
+              li {
+                height: 20px;
+                padding: 0;
+                justify-content: left !important;
+              }
+            }
+
+            p {
+              background: rgba(61, 61, 61, 0.4);
+              border: 1px solid #3d3d3d;
+              width: 80px;
+              cursor: pointer;
+              user-select: none;
+              height: 40px;
+              border-radius: 5px;
+              padding-top: 5px;
+            }
+          }
+          li:nth-child(even) {
+            justify-content: right;
+            margin-top: 20px;
+          }
+        }
+      }
+      .SecuritySettings {
+        width: 50%;
+        padding: 2%;
+        button {
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+      }
+  }
+}
+@media (max-width: 1500px) {
+  .AccountOverview {
+    height: 100%;
+    overflow-y: scroll;
+
+    .RecentActivity {
+      height: unset;
+      min-height: 100%;
+    }
+    .Balance {
+      .OverviewDetails {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: -30px;
+        .AccountOffer{
+          height: 500px;
+          width: 100%;
+          .AccountOfferShadow {
+
+            height: 219px;
+          }
+        }
+        .AccountOverviewStats {
+          overflow-y: unset;
+            width:100%;
+            height: unset;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .AccountActivity .Recent .Right {
+      display: block;
+
+      .AccountSummary {
+        width: 100%;
+      }
+      .BalanceOCHL {
+        width: 100%;
+      }
+    }
+}
+@media (max-width: 1000px) {
+  .AccountOverview {
+    height: 100%;
+    margin-top: 100px;
+    overflow-y: scroll;
+
+    .RecentActivity {
+      height: unset;
+      width: 0;
+      visibility: hidden;
+      min-height: 100%;
+    }
+    .Balance {
+      width: 100%;
+      .OverviewDetails .AccountOverviewStats .MetricCard  {
+        min-width: 330px;
+      }
+      .BalanceHeader {
+        visibility: hidden;
+        width: 0;
+        overflow: hidden;
+        height: 0;
+      }
+    }
+  }
+}
+@media (max-width: 1265px) {
+  .AccountOverview .Balance .BalanceHeader .BalanceBreakdown {
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    width: 0;
+  }
+  .AccountOverview .Balance .BalanceHeader .BalanceTotal ul li .Heading {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 900px) {
+  .AccountOverview {
+    margin-top: 110px;
+  }
+  .AccountActivity {
+    .Recent {
+      display: block;
+      margin-top: 10px;
+    }
+    .BalanceHistory {
+      padding: 5px !important;
+      width: 100% !important;
+      margin: 0 !important;
+      border-right: none !important;
+    }
+    .Right {
+      width: 100% !important;
+      margin-top: 20px;
+    }
+  }
+}

@@ -1,0 +1,124 @@
+@import "Colours";
+$primary-blue: #06d1ec;
+.App {
+  text-align: center;
+  height: 100%;
+  background: #14151d;
+}
+
+.Fairness {
+  background: #14151d;
+  margin-top: -20px;
+  padding-top: 10px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#root, html, body {
+  height: 105%;
+  background: #14151d;
+}
+
+.MainHeaderUser {
+  padding-top: 15px;
+  a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #6c6a6a;
+  }
+
+  a:visited {
+    text-decoration: none;
+    color: #6c6a6a;
+  }
+
+  span {
+    cursor: pointer;
+  }
+}
+
+#custom-carousel {
+  display: flex;
+  overflow-x: auto;
+  -ms-overflow-style: none; /* Hide the scrollbar for MS Edge */
+  scrollbar-width: none; /* Hide the scrollbar for Mozilla Firefox */
+
+  margin: 0 auto 0 auto;
+  width: 90vw;
+  height: fit-content;
+
+  border: solid #3d3d3d .5px;
+}
+
+#custom-carousel::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar on Webkit based browsers (Chrome, Safari, etc) */
+  -webkit-overflow-scrolling: touch; /* On touch screens the content continues to scroll for a while after finishing the scroll gesture */
+}
+
+.custom-carousel-item {
+  min-width: 300px;
+  height: 20vh;
+  margin: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-size: 5em;
+  text-align: center;
+  line-height: 300px;
+  background-color: #3d3d3d;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.custom-carousel-item:hover {
+  min-width: 400px;
+  min-height: 25vh;
+}
+
+@media (max-width: 900px) {
+
+  .Alt-header {
+    visibility: hidden;
+  }
+  .Alt-header-mobile {
+    visibility: visible;
+  }
+  .BetlockerSplash {
+    .MobilePadded {
+      padding-top: 50px;
+    }
+    .AltContainer {
+      .SaferGamblingOptions {
+        width: 100%;
+        min-width: unset;
+        margin: 0%;
+        padding: 0%;
+      }
+      .SearchResult {
+        margin-top: 55px;
+      }
+    }
+  }
+
+  .FairnessModalTabs {
+    width: 90% !important;
+    margin-left: 0 !important;
+    padding: 0 !important;
+    padding-top: 50px !important;
+  }
+
+  .FairnessCanvas {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+@media (min-width: 905px) {
+
+  .LinksVisible {
+    visibility: hidden !important;
+  }
+
+}

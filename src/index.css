@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Arial', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Arial', 'Courier New',
+    monospace;
+}
+
+canvas {
+  position: absolute;
+  top: -10px;
+  left: 0;
+}
+
+.ball {
+  position: absolute !important;
+  border: none !important;
+  top: -1px;
+  background-image: url('./Assets/svg/chip_orange.svg');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  display: flex;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+}
+
+.chip-green {
+  background-image: url('./Assets/svg/chip_green.svg') !important;
+}

@@ -1,0 +1,704 @@
+.CrashGame {
+    padding-top: 120px;
+}
+
+.CrashGameContent {
+    width: 100%;
+    display: inline-flex;
+    /* align-items: center; */
+    height: 600px;
+    padding: 0;
+    max-width: 1400px;
+    position: relative;
+}
+
+.CrashGameContent li {
+    list-style: none;
+}
+
+.CrashGameContent .Small {
+    width: 30%;
+    max-width: 400px;
+}
+
+.CrashGameContent .Large {
+    width: 70%;
+    height: 617px;
+}
+
+.CrashGameContent .Full {
+    width: 100% !important;
+}
+
+.CrashGameContent .CrashRoundHistory li {
+    padding: 6px 8px;
+    min-width: initial;
+    font-weight: 700;
+    color: #f44336;
+}
+
+.CrashGameContent .CrashRoundHistory:after {
+    /* top: 700px; */
+    height: 35px;
+    width: calc(1400px - 3%);
+    bottom: 0;
+    content: " ";
+    z-index: 5;
+    position: absolute;
+    background: linear-gradient(to left, #0d0e20, transparent);
+    pointer-events: none;
+}
+
+.CrashGameContent .CrashRoundHistory .Positive {
+    color: #60af5a;
+}
+
+.CrashGameContent .CrashRoundHistory {
+    background-color: #0d0e20;
+    display: inline-flex;
+    width: calc(98.5%);
+    max-width: calc(100%);
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+
+}
+.CrashGameContent .ChartCanvas {
+    background-image: url('http://localhost:3000/assets/games/online/crash/back1.png'), linear-gradient(rgba(15, 15, 49, 0.932), rgba(12, 12, 20, 0.918)), url('../../../../../../public/assets/games/online/crash/background.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    border-top-right-radius: 10px;
+}
+
+
+.HeadingColour {
+    color: rgb(183, 191, 214);
+}
+
+.ValueColour {
+    color: rgb(255, 255, 255);
+}
+
+.canvas {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    top: 12%;
+    letter-spacing: 1.2px;
+    /* left: calc(48vw); */
+    z-index: 999;
+    font-size: 35px;
+    color: #47f7df;
+}
+
+.rocket {
+    position: absolute;
+    width: 250px;
+    transition: all 0.02s;
+    display: none;
+}
+
+.preparing {
+    margin: 50px 0 0 50px;
+    color: white !important;
+    width: auto !important;
+}
+
+.explosion {
+    position: absolute;
+    width: 210px;
+    transition: all 0.1s;
+    display: none;
+}
+
+.GjcsD {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    flex-direction: row;
+    font-weight: 600;
+}
+
+.ChartCanvas h1 {
+    color: white;
+    text-align: center;
+    width: 400px;
+    font-size: 32px;
+}
+
+.ChartCanvas span {
+    color: rgb(155, 159, 174);
+    text-align: center;
+    width: 400px;
+    font-size: 21px;
+}
+
+.ChartCanvas .CrashValue {
+    color: #ff0000;
+    text-align: center;
+    width: 400px;
+    font-size: 105px !important;
+    font-weight: bold;
+}
+
+.ChartCanvas .Error {
+    color: #f44336;
+}
+
+.ChartCanvas .starting {
+    color: yellow;
+}
+
+.round {
+    font-size: 25px !important;
+}
+
+.Crash-GameTabs {
+    width: 100%;
+}
+
+.Crash-GameTabs .Header {
+    width: 100%;
+    min-height: 100px;
+}
+
+.Crash-GameTabs .TabHeading {
+    font-size: 90px;
+    padding-right: 150px;
+}
+
+.Crash-GameTabs .dicetab-list {
+    width: 100%;
+    font-weight: 600;
+    padding: 0 !important;
+    touch-action: manipulation;
+    position: relative;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    height: 55px;
+    align-items: center;
+    transition: background 300ms ease 0s, opacity 300ms ease 0s, transform 100ms ease 0s;
+    color: rgb(132, 136, 155);
+    background: #0e0e19;
+    border-top-left-radius: 10px;
+    box-shadow: none;
+}
+
+.Crash-GameTabs .dicetab-list-item img {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.Crash-GameTabs .dicetab-list-item span {
+    font-size: 0.875rem !important;
+}
+
+.Crash-GameTabs .dicetab-list-item {
+    flex: 1 1 0%;
+    padding: 35px;
+    line-height: 1;
+    height: 35px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(132, 136, 155, .2);
+}
+
+.Crash-GameTabs .dicetab-list-item:hover {
+    color: rgba(255, 157, 0, .8);
+}
+
+.Crash-GameTabs .dicetab-list-item:last-child {
+    width: 50px;
+}
+
+.Crash-GameTabs .dicetab-list-active:last-child {
+    border-top-right-radius: 10px !important;
+    width: 50px;
+}
+
+.Crash-GameTabs .dicetab-list-active:first-child {
+}
+
+.Crash-GameTabs .dicetab-list-active {
+    border-width: 1px 1px 0 1px;
+    color: rgb(255, 157, 0);
+    border-bottom: 2px solid rgb(255, 157, 0);
+}
+
+.dicetab-content {
+    margin-top: -5px;
+}
+
+.iyzdgH {
+    display: grid;
+    justify-items: center;
+    padding: 2em;
+    gap: 2em;
+}
+
+.RowHeader {
+    width: 100%;
+    display: inline-flex;
+    text-align: left;
+    margin: 0px 0px 0.25em;
+    color: rgb(155, 159, 174);
+    transition: all 200ms ease-out 0s;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0px;
+}
+
+.ChipValue {
+    width: 100%;
+    text-align: left;
+    margin: 0px 0px 0.25em;
+    color: rgb(155, 159, 174);
+    transition: all 200ms ease-out 0s;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0px;
+}
+
+.ChipValue .board {
+    width: 100%;
+    height: 48px;
+    border-radius: 5px;
+    background-color: #2b2f41;
+}
+
+.RowHeader .Left {
+    width: 50%;
+    float: left;
+}
+
+.RowHeader .Right {
+    width: 50%;
+    float: right;
+    text-align: right;
+}
+
+.CrashGameCanvas .CanvasField {
+    width: 100%;
+    height: 50px;
+}
+
+.CrashGameCanvas .AmountField {
+    width: 100%;
+    height: 50px;
+    background: rgba(13, 20, 38, .6);
+    border: 1px solid rgba(155, 159, 174, .1);
+    border-radius: 5px;
+    display: inline-flex;
+}
+
+.CrashGameCanvas .AmountField .Currency {
+    /*height: 50px !important;*/
+    margin: 0 !important;
+    width: 25px;
+    height: 25px;
+    margin-left: 10px !important;
+}
+
+.CrashGameCanvas .AmountField .Value {
+    width: calc(100% - 150px);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin: 2px;
+    height: 45px;
+    text-align: center;
+    padding-top: 10px;
+    display: inline-flex;
+}
+
+.CrashGameCanvas .AmountField .AutoValue {
+    width: calc(100% - 150px);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin: 2px;
+    height: 45px;
+    text-align: center;
+    padding-top: 10px;
+    display: inline-flex;
+}
+
+.CrashGameCanvas .AmountField .AutoActionValue {
+    width: calc(100% - 150px);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin: 2px;
+    height: 45px;
+    text-align: center;
+    padding-top: 10px;
+    display: inline-flex;
+}
+
+.CrashGameCanvas .AmountField .AutoActionValue img {
+    margin-top: 4px !important;
+    height: 16px;
+}
+
+.CrashGameCanvas .AmountField .ValueDivider {
+    width: 1px !important;
+    max-width: 1px !important;
+    margin-top: 10px;
+    height: 30px;
+    border: 1px solid #2b2f41;
+}
+
+.CrashGameCanvas .AmountField .Action {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    font-weight: 600;
+    font-size: inherit;
+    text-transform: uppercase;
+    border-radius: 5px;
+    touch-action: manipulation;
+    position: relative;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    transition: background 300ms ease 0s, opacity 300ms ease 0s, transform 100ms ease 0s;
+    line-height: 1.5;
+    color: rgb(132, 136, 155);
+    padding: calc(0.5em + 2px) 1em;
+}
+
+.CrashGameCanvas .AmountField .Action:hover {
+    background: rgba(255, 255, 255, 0.1);
+    margin-top: 2px;
+    height: 44px;
+}
+
+.CrashGameCanvas .AmountField .AutoAction:hover {
+    background: rgba(255, 255, 255, 0.1);
+    margin-top: 2px;
+    height: 45px;
+}
+
+.CrashGameCanvas .AmountField .AutoAction {
+    cursor: pointer;
+    width: 80px;
+    height: 50px;
+    font-weight: 600;
+    font-size: 12px;
+    border-radius: 5px;
+    touch-action: manipulation;
+    position: relative;
+    white-space: nowrap;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    transition: background 300ms ease 0s, opacity 300ms ease 0s, transform 100ms ease 0s;
+    line-height: 1.5;
+    color: rgb(132, 136, 155);
+    padding: calc(0.5em + 2px) 1em;
+}
+
+.CrashGameCanvas .AmountField .SelectedAction {
+    margin: 2px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.CrashGameCanvas .AmountField input[type="number"] {
+    border-bottom: none !important;
+    font-size: 14px !important;
+    text-align: center;
+    width: 100% !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 5px;
+    touch-action: manipulation;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 300ms ease 0s, opacity 300ms ease 0s, transform 100ms ease 0s;
+    line-height: 1.0;
+    color: rgb(132, 136, 155);
+    padding: calc(0.5em + 2px) 1em;
+    padding-top: 5px;
+}
+
+.CrashGameCanvas .AmountField .ValueIcon {
+    width: calc(100% - 50px);
+    height: 50px;
+}
+
+.CrashGameCanvas .AmountField .IconValue {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin: 2px;
+    height: 45px;
+    text-align: center;
+    font-weight: 600;
+    font-size: inherit;
+    text-transform: uppercase;
+    border-radius: 5px;
+    touch-action: manipulation;
+    position: relative;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    transition: background 300ms ease 0s, opacity 300ms ease 0s, transform 100ms ease 0s;
+    line-height: 1.5;
+    color: rgb(132, 136, 155);
+    padding: calc(0.5em + 2px) 1em;
+}
+
+.CrashGameCanvas .AmountField .IconValue .ProfitValue {
+    width: calc(100% - 50px);
+}
+
+.CrashGameCanvas .AmountField .IconValue .ProfitCurrency {
+    width: 50px;
+}
+
+.CrashGameCanvas .AmountField .IconValue img {
+    float: right;
+}
+
+.CrashGameCanvas .AmountField .Icon {
+    width: 50px;
+    height: 50px;
+}
+
+.CrashGameCanvas .CanvasRow .ThresholdList {
+    display: inline-flex;
+    width: 100%;
+}
+
+.CrashGameCanvas .CanvasRow .ThresholdList .Threshold {
+    cursor: pointer;
+    background: rgba(13, 20, 38, .6);
+    border: 1px solid rgba(155, 159, 174, .1);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    width: 33%;
+    text-align: left;
+    width: 100%;
+    text-align: left;
+    color: rgb(155, 159, 174);
+    transition: all 200ms ease-out 0s;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0px;
+}
+
+.CrashGameCanvas .CanvasRow .ThresholdList .ThresholdRow .ThresholdActionContainer {
+    background: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    border-radius: 5px;
+    margin: 2px;
+    height: 45px;
+    text-align: center;
+    padding-top: 10px;
+    display: inline-flex;
+}
+
+.CrashGameCanvas .CanvasRow .ThresholdList .ThresholdRow .ThresholdAction {
+    width: calc(100% - 50px);
+}
+
+.CrashGameCanvas .CanvasRow .ThresholdList .ThresholdRow .ThresholdActionIcon {
+    width: 20px;
+    margin-left: 20px;
+}
+
+.CrashGameCanvas .CanvasRow .ThresholdList .ThresholdRow {
+    width: 100%;
+}
+
+.CrashGameCanvas .CanvasRow .RollDiceCanvas {
+    width: 100%;
+}
+
+.CrashGameCanvas .CanvasRow .RollDiceCanvas button {
+    font-weight: 600;
+    font-size: inherit;
+    height: 50px;
+    border-radius: 5px;
+    touch-action: manipulation;
+    position: relative;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    transition: background 300ms ease 0s, opacity 300ms ease 0s, transform 100ms ease 0s;
+    line-height: 1.5;
+    color: rgb(255, 255, 255);
+    background: rgb(255, 157, 0);
+    box-shadow: none;
+    max-width: 300px;
+    padding: calc(1em + 2px);
+    width: 100%;
+    min-width: max-content;
+    margin-top: 30px !important;
+    margin-bottom: 40px !important;
+}
+
+.CrashGameCanvas .CanvasRow .RollDiceCanvas .Disabled {
+    background: rgba(255, 157, 0, 0.5) !important;
+}
+
+.CrashGameCanvas .CanvasRow {
+    width: 100%;
+}
+
+.CrashGameCanvas {
+    background: rgba(14, 14, 25, 0.84);
+    width: 100%;
+    margin: 0 !important;
+    margin-top: 5px !important;
+    border-bottom-left-radius: 5px;
+    padding: 15px;
+    height: 560px;
+}
+
+.GameOptionsList {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-left: -30px;
+}
+
+.GameOptionsList button {
+    background: none !important;
+}
+
+.GameOptionsList li {
+    overflow: hidden;
+    width: 60px !important;
+    padding: 0 !important;
+    margin: 10px !important;
+}
+
+.GameOption {
+    display: grid;
+    padding: 5px !important;
+    font-size: 0.8em !important;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: inherit;
+}
+
+.GameOption .OptionHeading {
+    border: 2px solid white;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+    margin-left: 10px;
+    border-radius: 999px;
+}
+
+.CrashParticipants {
+    width: 100%;
+    background: rgba(13, 20, 38, .6);
+    border: 1px solid rgba(155, 159, 174, .1);
+    padding: 15px;
+    border-radius: 5px;
+    max-height: 250px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.CrashParticipants .Headers {
+    text-align: center !important;
+    color: rgb(155, 159, 174);
+    text-transform: uppercase;
+}
+
+.CrashParticipants ul {
+    padding: 0% !important;
+    margin: 0% !important;
+}
+
+.CrashParticipants ul li {
+    color: rgb(141, 145, 159);
+    display: inline-flex;
+    font-weight: 600;
+    width: 33% !important;
+    border-bottom: 1px solid rgba(155, 159, 174, .1);
+}
+
+h1 {
+    font-size: 80px !important;
+    font-weight: bold !important;
+    /* width: auto !important; */
+    margin: auto !important;
+}
+
+.current {
+    color: #3c4983;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+@media (max-width: 800px) {
+
+    .Small, .Large {
+        width: 100% !important;
+        padding: 0 !important;
+        margin-top: 20px;
+    }
+
+    .Large {
+        height: 400px;
+    }
+
+    .DiceGame-GameTabs {
+        width: 100%;
+    }
+    .CrashGameContent {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .crash_area {
+        left: 1px !important;
+        width: 100% !important;
+    }
+    h1 {
+        width: auto !important;
+    }
+}
+
+@media (max-width: 280px) {
+    .crash_area {
+        left: 0px !important;
+        width: 100% !important;
+    }
+    .CrashValue {
+        font-size: 70px;
+    }
+    h1 {
+        font-size: 60px !important;
+        text-align: center;
+        width: auto !important;
+    }
+}
